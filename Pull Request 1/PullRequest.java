@@ -8,6 +8,17 @@ import java.util.List;
 import org.junit.Test;
 
 public class BlackWidow-ChessTest {
+  
+  @Test
+  public void piece(){
+    PieceUtils
+  }
+  
+  @Test
+  public void pieceUtils(){
+    
+  }
+  
   @Test
   public void king(){
     
