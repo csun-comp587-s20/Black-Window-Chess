@@ -10,8 +10,48 @@ import org.junit.Test;
 public class BlackWidow-ChessTest {
   
   @Test
+  public void whiteplayer(){
+    
+  }
+  
+  @Test
+  public void blackplayer(){
+    
+  }
+  
+  @Test
+  public void player(){
+    
+  }
+  
+  @Test
+  public void board(){
+    
+  }
+  
+  @Test
+  public void boardutils(){
+    
+  }
+  
+  @Test
+  public void move(){
+    
+  }
+  
+  @Test
+  public void movetransition(){
+    
+  }
+  
+  @Test
+  public void moveutils(){
+    
+  }
+  
+  @Test
   public void piece(){
-    PieceUtils
+    
   }
   
   @Test
