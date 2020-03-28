@@ -37,4 +37,14 @@ public class BlackWidow-ChessTest {
   public void pawns(){
     
   }
+  
+  @Test
+  public void boundries(){
+    
+  }
+  
+  @Test
+  public void piecehasbeeneaten(){
+    
+  }
 }
