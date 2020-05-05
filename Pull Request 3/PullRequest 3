@@ -1,0 +1,320 @@
+package BlackWindow-Chess;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class BlackWidow-ChessTest {
+  
+  @Test
+  public void whiteplayer(){
+    
+  }
+  
+  @Test
+  public void blackplayer(){
+    
+  }
+  
+  @Test
+  public void player(){
+    
+  }
+  
+  @Test
+  public void board(){
+    
+  }
+  
+  @Test
+  public void boardutils(){
+    
+  }
+  
+  @Test
+  public void move(){
+    
+  }
+  
+  @Test
+  public void movetransition(){
+    
+  }
+  
+  @Test
+  public void moveutils(){
+    
+  }
+  
+  @Test
+  public void piece(){
+    
+  }
+  
+  @Test
+  public void pieceUtils(){
+    
+  }
+  
+  @Test
+  public void king(){
+	  final Board.Builder builder = new Board.Builder();
+      // Black Layout
+      builder.setPiece(new King(Alliance.BLACK, 4, false, false));
+      // White Layout
+      builder.setPiece(new King(Alliance.WHITE, 36));
+      builder.setPiece(new King(Alliance.WHITE, 60, false, false));
+      // Set the current player
+      builder.setMoveMaker(Alliance.WHITE);
+      final Board board = builder.build();
+      final Collection<Move> whiteLegals = board.whitePlayer().getLegalMoves();
+      final Collection<Move> blackLegals = board.blackPlayer().getLegalMoves();
+      assertEquals(whiteLegals.size(), 18);
+      assertEquals(blackLegals.size(), 5);
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e8"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e7"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e6"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e5"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e3"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e2"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("a4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("b4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("c4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("d4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("f4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("g4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("h4"))));
+  }
+  
+  @Test
+  public void queen(){
+        final Board.Builder builder = new Board.Builder();
+        // Black Layout
+        builder.setPiece(new King(Alliance.BLACK, 4, false, false));
+        // White Layout
+        builder.setPiece(new Queen(Alliance.WHITE, 36));
+        builder.setPiece(new King(Alliance.WHITE, 60, false, false));
+        // Set the current player
+        builder.setMoveMaker(Alliance.WHITE);
+        final Board board = builder.build();
+        final Collection<Move> whiteLegals = board.whitePlayer().getLegalMoves();
+        final Collection<Move> blackLegals = board.blackPlayer().getLegalMoves();
+        assertEquals(whiteLegals.size(), 31);
+        assertEquals(blackLegals.size(), 5);
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e8"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e7"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e6"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e5"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e3"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e2"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("a4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("b4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("c4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("d4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("f4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("g4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("h4"))));
+    }
+  
+  @Test
+  public void rooks(){
+        final Board.Builder builder = new Board.Builder();
+        // Black Layout
+        builder.setPiece(new King(Alliance.BLACK, 4, false, false));
+        // White Layout
+        builder.setPiece(new Rook(Alliance.WHITE, 36));
+        builder.setPiece(new King(Alliance.WHITE, 60, false, false));
+        // Set the current player
+        builder.setMoveMaker(Alliance.WHITE);
+        final Board board = builder.build();
+        final Collection<Move> whiteLegals = board.whitePlayer().getLegalMoves();
+        final Collection<Move> blackLegals = board.blackPlayer().getLegalMoves();
+        assertEquals(whiteLegals.size(), 18);
+        assertEquals(blackLegals.size(), 5);
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e8"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e7"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e6"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e5"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e3"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e2"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("a4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("b4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("c4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("d4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("f4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("g4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("h4"))));
+    }
+  
+  @Test
+  public void bishops(){
+        Board.Builder builder = new Board.Builder();
+        // Black Layout
+        builder.setPiece(new King(Alliance.BLACK, 4, false, false));
+        // White Layout
+        builder.setPiece(new Bishop(Alliance.WHITE, 0));
+        builder.setPiece(new King(Alliance.WHITE, 60, false, false));
+        // Set the current player
+        builder.setMoveMaker(Alliance.WHITE);
+        //build the board
+        final Board board = builder.build();
+        final Collection<Move> whiteLegals = board.whitePlayer().getLegalMoves();
+        final Collection<Move> blackLegals = board.blackPlayer().getLegalMoves();
+        assertEquals(board.getPiece(0), board.getPiece(0));
+        assertNotNull(board.getPiece(0));
+        assertEquals(whiteLegals.size(), 12);
+        assertEquals(blackLegals.size(), 5);
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("a8"), BoardUtils.INSTANCE.getCoordinateAtPosition("b7"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("a8"), BoardUtils.INSTANCE.getCoordinateAtPosition("c6"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("a8"), BoardUtils.INSTANCE.getCoordinateAtPosition("d5"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("a8"), BoardUtils.INSTANCE.getCoordinateAtPosition("e4"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("a8"), BoardUtils.INSTANCE.getCoordinateAtPosition("f3"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("a8"), BoardUtils.INSTANCE.getCoordinateAtPosition("g2"))));
+        assertTrue(whiteLegals.contains(Move.MoveFactory
+                .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("a8"), BoardUtils.INSTANCE.getCoordinateAtPosition("h1"))));
+    }
+  
+  @Test
+  public void knights(){
+	  final Board.Builder builder = new Board.Builder();
+      // Black Layout
+      builder.setPiece(new King(Alliance.BLACK, 4, false, false));
+      // White Layout
+      builder.setPiece(new Knight(Alliance.WHITE, 36));
+      builder.setPiece(new King(Alliance.WHITE, 60, false, false));
+      // Set the current player
+      builder.setMoveMaker(Alliance.WHITE);
+      final Board board = builder.build();
+      final Collection<Move> whiteLegals = board.whitePlayer().getLegalMoves();
+      final Collection<Move> blackLegals = board.blackPlayer().getLegalMoves();
+      assertEquals(whiteLegals.size(), 18);
+      assertEquals(blackLegals.size(), 5);
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e8"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e7"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e6"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e5"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e3"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e2"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("a4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("b4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("c4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("d4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("f4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("g4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("h4"))));
+  }
+  
+  @Test
+  public void pawns(){
+	  final Board.Builder builder = new Board.Builder();
+      // Black Layout
+      builder.setPiece(new King(Alliance.BLACK, 4, false, false));
+      // White Layout
+      builder.setPiece(new Pawn(Alliance.WHITE, 36));
+      builder.setPiece(new King(Alliance.WHITE, 60, false, false));
+      // Set the current player
+      builder.setMoveMaker(Alliance.WHITE);
+      final Board board = builder.build();
+      final Collection<Move> whiteLegals = board.whitePlayer().getLegalMoves();
+      final Collection<Move> blackLegals = board.blackPlayer().getLegalMoves();
+      assertEquals(whiteLegals.size(), 18);
+      assertEquals(blackLegals.size(), 5);
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e8"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e7"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e6"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e5"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e3"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("e2"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("a4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("b4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("c4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("d4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("f4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("g4"))));
+      assertTrue(whiteLegals.contains(Move.MoveFactory
+              .createMove(board, BoardUtils.INSTANCE.getCoordinateAtPosition("e4"), BoardUtils.INSTANCE.getCoordinateAtPosition("h4"))));
+  }
+  
+  @Test
+  public void boundries(){
+    
+  }
+  
+  @Test
+  public void piecehasbeeneaten(){
+    
+  }
+}
